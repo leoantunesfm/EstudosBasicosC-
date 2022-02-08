@@ -16,6 +16,16 @@ namespace Estoque1
             return Preco * Quantidade;
         }
 
+        public void SomaEstoque(int quantidade)
+        {
+            Quantidade += quantidade;
+        }
+
+        public void SubtraiEstoque(int quantidade)
+        {
+            Quantidade -= quantidade;
+        }
+
         public override string ToString()
         {
             return Nome
