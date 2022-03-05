@@ -7,15 +7,19 @@ namespace Estoque1
     {
         static void Main(string[] args)
         {
-            Produto p = new Produto();
+            string nome;
+            double preco;
+            int quantidade;
 
             Console.WriteLine("Entre com os dados do primeiro produto:");
             Console.Write("Nome: ");
-            p.Nome = Console.ReadLine();
+            nome = Console.ReadLine();
             Console.Write("Preço: ");
-            p.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.Write("Quantidade em estoque: ");
-            p.Quantidade = int.Parse(Console.ReadLine());
+            quantidade = int.Parse(Console.ReadLine());
+
+            Produto p = new Produto(nome, preco, quantidade);
 
             Console.WriteLine();
             Console.WriteLine("Dados do produto: " + p);
