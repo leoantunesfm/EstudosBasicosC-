@@ -7,8 +7,8 @@ namespace ContaBancaria
 {
     class ContaPadrao
     {
-        public int NrConta { get; set; }
-        public string NmTitular { get; private set; }
+        public int NrConta { get; private set; }
+        public string NmTitular { get; set; }
         public double Saldo { get; private set; }
 
         public ContaPadrao(int nrConta, string nmTitular)
