@@ -17,9 +17,9 @@ namespace ContaBancaria
             NmTitular = nmTitular;
         }
 
-        public ContaPadrao (int nrConta, string nmTitular, double saldo) : this (nrConta, nmTitular)
+        public ContaPadrao (int nrConta, string nmTitular, double valor) : this (nrConta, nmTitular)
         {
-            Saldo = saldo;
+            Deposito(valor);
         }
 
         public void Deposito(double valor)
