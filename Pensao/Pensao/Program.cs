@@ -29,9 +29,9 @@ namespace Pensao
 
             for (int i = 0; i < 10; i++)
             {
-                if (!(hospede[i] == null))
+                if (hospede[i] != null)
                 {
-                    Console.WriteLine(i + ": " + hospede[i].Nome + ", " + hospede[i].Email);
+                    Console.WriteLine(i + ": " + hospede[i]);
                 }
             }
         }
