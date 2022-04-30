@@ -1,0 +1,1 @@
+# Apenas exercícios dos cursos de C# e mais alguns testes
