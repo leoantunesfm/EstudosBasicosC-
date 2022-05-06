@@ -26,16 +26,29 @@ namespace Ex_Polimorfismo
 
                 switch (tipoProduto)
                 {
-                    case 'c': Produto produto = new Produto(nome, preco);
-                              produtos.Add(produto);
-                        break;
-                    case 'u': Console.Write("Data de fabricação (DD/MM/YYYY): ");
-                              DateTime dataFabricacao = DateTime.Parse(Console.ReadLine());
-                              Produto produtoUsado = new ProdutoUsado(nome, preco, dataFabricacao);
-                              produtos.Add(produtoUsado);
-                        break;
+                    case 'c':
+                        produtos.Add(new Produto(nome, preco));
 
+                        break;
+                    case 'u': 
+                        Console.Write("Data de fabricação (DD/MM/YYYY): ");
+                        DateTime dataFabricacao = DateTime.Parse(Console.ReadLine());
+                        produtos.Add(new ProdutoUsado(nome, preco, dataFabricacao));
+                        break;
+                    case 'i': 
+                        Console.Write("Taxa de importação: ");
+                        double taxaImportacao = double.Parse(Console.ReadLine());
+                        produtos.Add(new ProdutoImportado(nome, preco, taxaImportacao));
+                        break;
                 }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Etiquetas de preço: ");
+
+            foreach (Produto produto in produtos)
+            {
+                Console.WriteLine(produto.EtiquetaPreco());
             }
         }
     }

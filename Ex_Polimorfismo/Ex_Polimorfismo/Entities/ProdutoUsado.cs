@@ -20,7 +20,7 @@ namespace Ex_Polimorfismo.Entities
             return Nome
                 + " (Usado), $"
                 + Preco.ToString("F2")
-                +$" (Data de fabricação: {DataFabricacao})";
+                +$" (Data de fabricação: {DataFabricacao.ToString("d")})";
         }
     }
 }
