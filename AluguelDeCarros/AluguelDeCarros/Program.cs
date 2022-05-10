@@ -24,7 +24,7 @@ namespace AluguelDeCarros
 
             AluguelVeiculo aluguelVeiculo = new AluguelVeiculo(retirada, devolucao, new Veiculo(modelo));
 
-            AluguelService aluguelService = new AluguelService(precoHora, precoDia);
+            AluguelService aluguelService = new AluguelService(precoHora, precoDia, new ImpostoBrasilService());
 
             aluguelService.ProcessaInvoice(aluguelVeiculo);
 

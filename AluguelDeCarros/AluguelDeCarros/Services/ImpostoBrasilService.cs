@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AluguelDeCarros.Services
 {
-    class ImpostoBrasilService
+    class ImpostoBrasilService : IImpostoService
     {
         public double Imposto(double baseCalculo)
         {
